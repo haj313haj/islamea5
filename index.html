@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ملخص الوحدة الخامسة — الثالث المتوسط | للاستاذ نجحني بليز</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Tajawal', 'Amiri', 'sans-serif'],
+            quran: ['Amiri', 'serif'],
+            ruqaa: ['Aref Ruqaa', 'Amiri', 'serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Tajawal', 'Amiri', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .quran-text {
+      font-family: 'Amiri', serif;
+      line-height: 2.35;
+      word-spacing: 2px;
+    }
+    .arabic-display {
+      font-family: 'Aref Ruqaa', 'Amiri', serif;
+    }
+    .ayah-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.85rem;
+      height: 1.85rem;
+      padding: 0 0.35rem;
+      margin: 0 0.25rem;
+      border-radius: 9999px;
+      font-family: 'Tajawal', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+    .glass-header {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: #fff !important;
+        color: #000 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-300">
+
+  <!-- الشريط العلوي الثابت -->
+  <header class="sticky top-0 z-40 glass-header bg-white/90 dark:bg-slate-900/90 border-b border-emerald-200/70 dark:border-slate-800 shadow-sm no-print">
+    <div class="max-w-6xl mx-auto px-3 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-2">
+      <!-- هوية الملخص وعبارة الأستاذ -->
+      <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-700 text-white flex items-center justify-center shadow-md shrink-0">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <div class="min-w-0">
+          <div class="flex flex-wrap items-center gap-2">
+            <h1 class="text-base sm:text-xl font-extrabold text-emerald-900 dark:text-emerald-300 truncate">
+              الوحدة الخامسة — الثالث المتوسط
+            </h1>
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-900 dark:bg-amber-500/20 dark:text-amber-300 border border-amber-300/70 dark:border-amber-500/40 shadow-xs">
+              للاستاذ نجحني بليز
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 truncate">
+            القرآن الكريم والتربية الإسلامية • نصوص وإجابات نموذجية من الكتاب نصاً
+          </p>
+        </div>
+      </div>
+
+      <!-- أدوات التحكم السريعة -->
+      <div class="flex items-center gap-2">
+        <button
+          id="toggleAllAnswersBtn"
+          type="button"
+          onclick="toggleAllAnswers()"
+          class="px-3 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-600 hover:bg-emerald-700 active:scale-[0.99] text-white shadow-sm transition flex items-center gap-1.5 cursor-pointer"
+        >
+          <svg id="eyeIcon" class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+          </svg>
+          <span id="toggleAllAnswersText">إخفاء كل الحلول</span>
+        </button>
+
+        <button
+          id="themeToggleBtn"
+          type="button"
+          onclick="toggleDarkMode()"
+          aria-label="تبديل الوضع الليلي"
+          class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-amber-300 border border-slate-200 dark:border-slate-700 transition cursor-pointer"
+        >
+          <svg id="sunIcon" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg id="moonIcon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- شريط التنقل بين دروس الوحدة الخامسة -->
+    <nav aria-label="دروس الوحدة الخامسة" class="bg-emerald-50/80 dark:bg-slate-900/60 border-t border-emerald-100 dark:border-slate-800">
+      <div id="lessonNavContainer" class="max-w-6xl mx-auto px-3 sm:px-6 py-2 flex items-center gap-2 overflow-x-auto no-scrollbar"></div>
+    </nav>
+  </header>
+
+  <!-- المحتوى الرئيسي -->
+  <main id="top" class="max-w-6xl mx-auto px-3 sm:px-6 py-5 sm:py-8 space-y-6">
+
+    <!-- بطاقة الترحيب وإبراز عبارة الأستاذ -->
+    <section class="relative overflow-hidden rounded-3xl bg-gradient-to-l from-emerald-900 via-emerald-800 to-teal-900 text-white p-5 sm:p-8 shadow-lg border border-emerald-700/50">
+      <div class="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="space-y-2 max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/20 border border-amber-300/40 text-amber-200 text-xs sm:text-sm font-bold">
+            <span>✦</span>
+            <span>للاستاذ نجحني بليز</span>
+          </div>
+          <h2 class="arabic-display text-2xl sm:text-4xl font-bold leading-snug">
+            ملخص الوحدة الخامسة — الصف الثالث المتوسط (نص الكتاب الوزاري)
+          </h2>
+          <p class="text-xs sm:text-base leading-relaxed">
+            جميع معاني الكلمات والمعنى العام والإرشادات وحلول المناقشة مأخوذة نصاً من الكتاب المقرر للوحدة الخامسة (الصفحات ١٢١ - ١٥٥) دون زيادة أو اجتهاد خارج الكتاب، مع قصر معاني الكلمات والمعنى العام على آيات الحفظ (١ - ٥) في سورة الفتح.
+          </p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 sm:p-5 text-center shrink-0">
+          <p class="text-[11px] uppercase tracking-wider text-emerald-200 mb-1">إعداد وتقديم</p>
+          <p class="arabic-display text-lg sm:text-xl font-bold text-amber-300">للاستاذ نجحني بليز</p>
+          <p class="text-xs text-emerald-100 mt-1">الوحدة الخامسة • ٦ دروس متكاملة</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- حاوية عرض الدرس النشط -->
+    <div id="lessonContentContainer" class="space-y-6"></div>
+
+    <!-- رسالة تنبيه صغيرة -->
+    <div id="toastBanner" class="fixed bottom-5 right-5 z-50 hidden items-center gap-2 px-4 py-3 rounded-2xl bg-slate-900 dark:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow-xl border border-slate-700 dark:border-emerald-500">
+      <svg class="w-4 h-4 text-amber-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+      <span id="toastMessage">تمت العملية بنجاح</span>
+    </div>
+
+  </main>
+
+  <!-- تذييل الصفحة -->
+  <footer class="mt-12 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-6 px-4 text-center no-print">
+    <div class="max-w-4xl mx-auto space-y-2">
+      <p class="text-sm sm:text-base font-extrabold text-emerald-800 dark:text-emerald-300">
+        للاستاذ نجحني بليز — ملخص الوحدة الخامسة (الصف الثالث المتوسط)
+      </p>
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        مطابق لنص الكتاب المقرر • اضغط على أي سؤال لإظهار إجابته أو إخفائها أثناء المراجعة الذاتية.
+      </p>
+    </div>
+  </footer>
+
+  <!-- زر سريع للعودة للأعلى -->
+  <button
+    id="scrollTopBtn"
+    type="button"
+    onclick="scrollToTop()"
+    aria-label="العودة إلى الأعلى"
+    class="fixed bottom-5 left-5 z-40 w-12 h-12 rounded-2xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-4 cursor-pointer no-print"
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script>
+    /**
+     * بيانات الوحدة الخامسة للصف الثالث المتوسط — مطابقة لنص الكتاب المقرر (1787_8.pdf، الصفحات ١٢١ - ١٥٥).
+     */
+    const UNIT_FIVE_DATA = [
+      {
+        id: 'lesson-1',
+        number: 'الدرس الأول',
+        shortTitle: 'سورة الفتح (١ - ٥)',
+        title: 'من سورة الفتح — آيات الحفظ (١ - ٥)',
+        badge: 'تلاوة وحفظ ومعاني الكلمات والمعنى العام والمناقشة',
+        isQuranLesson: true,
+        quranFullText: {
+          intro: 'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ • بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
+          verses: [
+            { num: '١', text: 'إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا' },
+            { num: '٢', text: 'لِّيَغْفِرَ لَكَ اللَّهُ مَا تَقَدَّمَ مِن ذَنبِكَ وَمَا تَأَخَّرَ وَيُتِمَّ نِعْمَتَهُ عَلَيْكَ وَيَهْدِيَكَ صِرَاطًا مُّسْتَقِيمًا' },
+            { num: '٣', text: 'وَيَنصُرَكَ اللَّهُ نَصْرًا عَزِيزًا' },
+            { num: '٤', text: 'هُوَ الَّذِي أَنزَلَ السَّكِينَةَ فِي قُلُوبِ الْمُؤْمِنِينَ لِيَزْدَادُوا إِيمَانًا مَّعَ إِيمَانِهِمْ ۗ وَلِلَّهِ جُنُودُ السَّمَاوَاتِ وَالْأَرْضِ ۚ وَكَانَ اللَّهُ عَلِيمًا حَكِيمًا' },
+            { num: '٥', text: 'لِّيُدْخِلَ الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ جَنَّاتٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ خَالِدِينَ فِيهَا وَيُكَفِّرَ عَنْهُمْ سَيِّئَاتِهِمْ ۚ وَكَانَ ذَٰلِكَ عِندَ اللَّهِ فَوْزًا عَظِيمًا' }
+          ],
+          outro: 'صَدَقَ اللَّهُ الْعَلِيُّ الْعَظِيمُ'
+        },
+        // معاني الكلمات الواردة في الكتاب نصاً لآيات الحفظ (١ - ٥) فقط (صفحات ١٢٤ - ١٢٥)
+        vocabulary: [
+          { word: 'فتحاً مبيناً', meaning: 'هو صلح الحديبية سنة ست هجرية.' },
+          { word: 'السكينة', meaning: 'الطمأنينة والثبات.' }
+        ],
+        // المعنى العام لآيات الحفظ (١ - ٥) من الكتاب نصاً (صفحات ١٢٦ - ١٢٧)
+        generalMeanings: [
+          {
+            ayah: 'إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا (١)',
+            meaning: 'إنا فتحنا لك -أيها الرسول - فتحا مبينًا، يظهر الله فيه دينك، وينصرك على عدوك، وهو هدنة الحديبية التي أمن الناس بسببها بعضهم بعضًا، فاتسعت دائرة الدعوة لدين الله، وتمكن من يريد الوقوف على حقيقة الإسلام من معرفته، فدخل الناس في دين الله أفواجًا؛ ولذلك سماه الله فتحا مبينًا، أي ظاهراً جليا.'
+          },
+          {
+            ayah: 'لِّيَغْفِرَ لَكَ اللَّهُ مَا تَقَدَّمَ مِن ذَنبِكَ وَمَا تَأَخَّرَ وَيُتِمَّ نِعْمَتَهُ عَلَيْكَ وَيَهْدِيَكَ صِرَاطًا مُّسْتَقِيمًا (٢) وَيَنصُرَكَ اللَّهُ نَصْرًا عَزِيزًا (٣)',
+            meaning: 'فتحنا لك ذلك الفتح، ويسرناه لك؛ ليغفر الله لك ما تقدم من ذنبك وما تأخر؛ بسبب ما حصل من هذا الفتح من الطاعات الكثيرة وبما تحملته من المشقات، والذنب هنا ليس معصية الله تعالى، فالرسول معصوم ومنزّه عن الذنوب، ولكن دعوته، وتسفيه آلهة المشركين، كانت تعدّها قريش ذنوباً، محيت بظهوره عليهم، وقوة الإسلام المتعاظمة، ويتم نعمته عليك بإظهار دينك ونصرك على أعدائك، ويرشدك طريقا مستقيما من الدين لا عوج فيه، وينصرك الله نصراً قوياً لا يَضْعُف فيه الإسلام.'
+          },
+          {
+            ayah: 'هُوَ الَّذِي أَنزَلَ السَّكِينَةَ فِي قُلُوبِ الْمُؤْمِنِينَ لِيَزْدَادُوا إِيمَانًا مَّعَ إِيمَانِهِمْ ۗ وَلِلَّهِ جُنُودُ السَّمَاوَاتِ وَالْأَرْضِ ۚ وَكَانَ اللَّهُ عَلِيمًا حَكِيمًا (٤)',
+            meaning: 'هو الله الذي أنزل الطمأنينة في قلوب المؤمنين بالله ورسوله يوم الحديبية فسكنت قلوبهم، ورسخ اليقين فيها؛ ليزدادوا تصديقًا لله واتباعًا لرسوله مع تصديقهم واتباعهم. والله سبحانه وتعالى جنود السموات والأرض ينصر بهم عباده المؤمنين. وكان الله عليماً بمصالح خلقه، حكيمًا في تدبيره وصنعه.'
+          },
+          {
+            ayah: 'لِّيُدْخِلَ الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ جَنَّاتٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ خَالِدِينَ فِيهَا وَيُكَفِّرَ عَنْهُمْ سَيِّئَاتِهِمْ ۚ وَكَانَ ذَٰلِكَ عِندَ اللَّهِ فَوْزًا عَظِيمًا (٥)',
+            meaning: 'ليدخل الله المؤمنين والمؤمنات جنات تجري من تحت أشجارها وقصورها الأنهار، ماكثين فيها أبدًا، ويمحو عنهم سيئ ما عملوا، فلا يعاقبهم عليه، وكان ذلك الجزاء عند الله نجاة من كل غم، وظفراً بكل مطلوب.'
+          }
+        ],
+        // أبرز ما ترشد إليه السورة نصاً من الكتاب (صفحات ١٣٤ - ١٣٥)
+        guidance: [
+          'مظاهر كمال رسول الله (ص) في تواضعه ورحمته وبره وإحسانه إلى المؤمنين.',
+          'لا حرج على أصحاب الأعذار الذين ذكر الله تعالى في قوله: ﴿لَّيْسَ عَلَى الْأَعْمَىٰ حَرَجٌ وَلَا عَلَى الْأَعْرَجِ حَرَجٌ وَلَا عَلَى الْمَرِيضِ حَرَجٌ﴾ (النور: ٦١) وفي هذه الآية ﴿وَلَا عَلَى الَّذِينَ لَا يَجِدُونَ مَا يُنفِقُونَ﴾ (التوبة: ٩١) وبشرط طاعة الله والرسول فيما يستطيعون والنصح الله والرسول بالقول والعمل وترك التثبيط والتخذيل والإرجاف من الإشاعات المضادة للإسلام والمسلمين.',
+          'بيان ما كان عليه أصحاب الرسول (ص) من المهاجرين والأنصار من الإيمان واليقين والسمع والطاعة والمحبة والولاء ورقة القلوب وصفاء الأرواح.',
+          'لا حرج على المؤمنين الصادقين إذا تخلفوا فإنهم ما تخلفوا إلا لعذر. وإنما السبيل على الأغنياء القادرين على السير إلى الجهاد وقعدوا عنه لنفاقهم.',
+          'مشروعية الاعتذار على شرط أن يكون المؤمن صادقاً في اعتذاره.',
+          'المنافقون كالمشركين رجس أي نجس؛ لأن بواطنهم خبيثة بالشرك والكفر وأعمالهم الباطنة خبيثة أيضاً إذ كلها تآمر على المسلمين ومكر بهم وكيد لهم.',
+          'إن كفار البادية ومنافقيها أشدُّ كفراً ونفاقاً لتأثير البيئة وقساوتها.',
+          'فضل النفقة في سبيل الله والإخلاص فيها الله تعالى.',
+          'فضل السبق للخير والفوز بالأولية فيه.',
+          'الدعاء لأهل التوحيد الذين خلطوا عملاً صالحاً وآخر سيئاً بأن يغفر الله لهم ويرحمهم.',
+          'بيان أكبر مؤامرة ضد الإسلام قام بها المنافقون.',
+          'لا يصح الاغترار بأقوال أهل النفاق فإنها كذب كلها.',
+          'فضل التطهر والمبالغة في الطهارتين الروحية والبدنية.',
+          'تحذير الظلم والإسراف فيه فإنه يحرم صاحبه هداية الله فيهلك وهو ظالم فيخسر دنياه وآخرته.'
+        ],
+        // أسئلة المناقشة وحلولها نصاً من الكتاب (صفحات ١٢٦ - ١٣٥)
+        discussion: [
+          {
+            q: 'ما الفتح المبين الذي ذكرته الآية الكريمة ؟',
+            a: 'هو هدنة الحديبية (سنة ست هجرية) التي أمن الناس بسببها بعضهم بعضًا، فاتسعت دائرة الدعوة لدين الله، وتمكن من يريد الوقوف على حقيقة الإسلام من معرفته، فدخل الناس في دين الله أفواجًا؛ ولذلك سماه الله فتحا مبينًا، أي ظاهراً جليا.'
+          },
+          {
+            q: 'ما المقصود بإتمام النعمة على رسول الله (ص) ؟',
+            a: 'بإظهار دينه ونصره على أعدائه.'
+          },
+          {
+            q: 'ما المقصود بالسكينة التي نزلت على قلوب المؤمنين ؟',
+            a: 'الطمأنينة والثبات في قلوب المؤمنين بالله ورسوله يوم الحديبية فسكنت قلوبهم، ورسخ اليقين فيها؛ ليزدادوا تصديقًا لله واتباعًا لرسوله مع تصديقهم واتباعهم.'
+          },
+          {
+            q: 'مع من تكون البيعة والعقد ؟',
+            a: 'إن الذين يبايعونك أيها النبي - في بيعة الرضوان تحت الشجرة بـ "الحديبية" على القتال إنما يبايعون الله، ويعقدون العقد معه ابتغاء جنته ورضوانه.'
+          },
+          {
+            q: 'من الذين تخلفوا ؟ ولماذا ؟',
+            a: 'هم المخلفون من الأعراب (البدو) الذين تخلفوا عن الخروج مع النبي (ص) إلى "مكة" للحديبية؛ لأنهم ظنوا ظن السوء بالله ورسوله (ص) أن رسول الله (ص) ومن معه من أصحابه سيَهْلكون، ولا يرجعون إليهم أبدًا، وحسن الشيطان ذلك في قلوبهم، وتخوفوا من قريش.'
+          },
+          {
+            q: 'من الذين أعذروا عن الجهاد ؟',
+            a: 'الأعمى، والأعرج، والمريض؛ لعدم استطاعتهم (وكذلك الذين لا يجدون ما ينفقون بشرط طاعة الله والرسول فيما يستطيعون، والمؤمنون الصادقون الذين تخلفوا لعذر).'
+          },
+          {
+            q: 'ما الذي تستنتجه من الآيات الكريمة ولم يذكر في أبرز ما ترشد إليه السورة ؟',
+            a: 'أن هدنة الحديبية كانت فتحا مبينا يسر الله به انتشار الدعوة ودخول الناس في الإسلام أفواجا، وأن جنود السموات والأرض بيد الله ينصر بهم عباده المؤمنين، وأن الله يعلم ما في القلوب من صدق أو نفاق، وأن رسول الله (ص) أرسل شاهدا ومبشرا ونذيرا لتعزيره وتوقيره وتسبيح الله بكرة وأصيلا.'
+          }
+        ]
+      },
+      {
+        id: 'lesson-2',
+        number: 'الدرس الثاني',
+        shortTitle: 'غني مغتر بماله وفقير معتز بإيمانه',
+        title: 'غني مغتر بماله وفقير معتز بإيمانه',
+        badge: 'نصوص وإجابات نموذجية من الكتاب نصاً',
+        isQuranLesson: false,
+        hasGuidanceSection: true,
+        guidanceTitle: 'أبرز ما نستنتجه من القصة',
+        guidance: [
+          'استحسان ضرب الأمثال للوصول إلى المعاني الخفية عن الأذهان.',
+          'تقرير عقيدة التوحيد والبعث والجزاء.',
+          'مهما كانت نعم الدنيا المادية كبيرة وواسعة، فإنها غير مطمئنة وغير ثابتة، فصاعقة واحدة تستطيع في ليلة أو في لحظات معدودة أن تُبيد كل شيء.',
+          'إن القوة بالحق ولا تقترن القوة بالسلطة والغنى وإنما بالإيمان.',
+          'التنديد بالكبر والغرور إذ يفضيان بصاحبهما إلى الشرك والكفر.',
+          'القناعة والإيمان كنز لا يفنى يضمن العزة ويحفظ الكرامة ويسعد النفس.',
+          'استحباب قول: ما شاء الله ولا حول ولا قوة إلا بالله حين يعجبنا شيء: فإنه لا يرى فيه مكروهاً إن شاء الله.',
+          'استجابة الله تعالى لعباده المؤمنين وتحقيق رجائهم فيه سبحانه وتعالى.',
+          'المخذول من خذله الله تعالى فإنه لا ينصر أبدا.',
+          'الأصدقاء الذين يلتفون حول الإنسان بغرض الإفادة من إمكاناته المادية هم على قدر من الغدر والخيانة إذ إنهم يتخلون عنه في اللحظة التي تزول فيها إمكاناته المادية ويتركونه وحيداً لهمومه: (ولم تكن له فئة ينصرونه من دون الله).',
+          'الملك والسلطان الله يوم القيامة لا لغيره إذ الملك والأمر كلاهما الله تعالى.'
+        ],
+        discussion: [
+          {
+            q: 'ما الأهداف التي من أجلها يضرب الله تعالى الأمثال في القرآن الكريم ؟',
+            a: 'للوصول إلى المعاني الخفية عن الأذهان وتوضيح الحق وتقرير عقيدة التوحيد والبعث والجزاء وبيان عاقبة الغرور والكفر ومصير المؤمنين.'
+          },
+          {
+            q: 'أين تكمن قوة الإنسان ؟',
+            a: 'إن القوة بالحق ولا تقترن القوة بالسلطة والغنى وإنما بالإيمان.'
+          },
+          {
+            q: 'استشهد بآية تتضمن مثلا يبين الاختلاف بين فريق الكافرين وفريق المؤمنين .',
+            a: 'قال تعالى: ﴿وَاضْرِبْ لَهُم مَّثَلًا رَّجُلَيْنِ جَعَلْنَا لِأَحَدِهِمَا جَنَّتَيْنِ مِنْ أَعْنَابٍ وَحَفَفْنَاهُمَا بِنَخْلٍ وَجَعَلْنَا بَيْنَهُمَا زَرْعًا * كِلْتَا الْجَنَّتَيْنِ آتَتْ أُكُلَهَا وَلَمْ تَظْلِم مِنْهُ شَيْئًا ۚ وَفَجَّرْنَا خِلَالَهُمَا نَهَرًا * وَكَانَ لَهُ ثَمَرٌ فَقَالَ لِصَاحِبِهِ وَهُوَ يُحَاوِرُهُ أَنَا أَكْثَرُ مِنكَ مَالًا وَأَعَزُّ نَفَرًا * وَدَخَلَ جَنَّتَهُ وَهُوَ ظَالِمٌ لِّنَفْسِهِ قَالَ مَا أَظُنُّ أَن تَبِيدَ هَٰذِهِ أَبَدًا * وَمَا أَظُنُّ السَّاعَةَ قَائِمَةً وَلَئِن رُّدِدتُّ إِلَىٰ رَبِّي لَأَجِدَنَّ خَيْرًا مِّنْهَا مُنقَلَبًا﴾ (الكهف: ٣٢ - ٣٦).'
+          },
+          {
+            q: 'تحدث عن قصة الغني المغرور وصاحبه الفقير المعتز بإيمانه .',
+            a: 'يروي القرآن الكريم في سورة الكهف قصة رجلين من الأصدقاء أو الإخوة؛ كان لأحدهما جنتان (بستان ومزرعة) من أعناب ونخل وزرع يمر خلالهما نهر، فخدعه نعيم الدنيا وأصابه الغرور فافتخر على صاحبه المؤمن الفقير بكثرة المال والأولاد والنفوذ، وظن أن جنته لا تبيد أبداً وأن الساعة غير قائمة، وإن رُدّ إلى ربه فسيجد خيراً منها. فوبخه صاحبه المؤمن الفقير ونصحه بأن يشكر الله ويقول (ما شاء الله ولا قوة إلا بالله) وحذره من قدرة الله، فنزل العذاب الإلهي ليلاً فأهلك البستان ودمره، فأصبح الغني يقلب كفيه ندماً وتحسراً ويقول: يا ليتني لم أشرك بربي أحداً، ولم يجد فئة تنصره من دون الله، بينما اعتز المؤمن الفقير بإيمانه وتوحيده.'
+          }
+        ]
+      },
+      {
+        id: 'lesson-3',
+        number: 'الدرس الثالث',
+        shortTitle: 'الحديث: من حلاوة الإيمان',
+        title: 'من الحديث النبوي الشريف: من حلاوة الإيمان (للشرح والحفظ)',
+        badge: 'نصوص وإجابات نموذجية من الكتاب نصاً',
+        isQuranLesson: false,
+        // النص الكامل للحديث الشريف من الكتاب المقرر (صفحة ١٤٠)
+        hadithText: {
+          narrator: 'قال رسول الله محمد (صلى الله عليه وآله وسلم):',
+          body: '«ثلاث من كن فيه، وجد بهن حلاوة الإيمان: أن يكون الله ورسوله أحب إليه مما سواهما، وأن يُحب المرء لا يحبه إلا الله وأن يكره أن يعود في الكفر بعد أن أنقذه الله منه كما يكره أن يقذف في النار».'
+        },
+        // معاني المفردات الواردة في الدرس الثالث نصاً (صفحة ١٤٠)
+        vocabulary: [
+          { word: 'ثلاث', meaning: 'ثلاث خصال، ثلاث صفات.' },
+          { word: 'كن فيه', meaning: 'وجدن فيه.' },
+          { word: 'حلاوة الإيمان', meaning: 'أن يستلذ المرء بالطاعات، وأن يؤثر ذلك في متاع الحياة الدنيا.' }
+        ],
+        hasGuidanceSection: false,
+        discussion: [
+          {
+            q: 'المؤمن تطيب نفسه بالإيمان ويلتذ به إذا ما تحلّى بصفات ثلاث اذكرها بإيجاز .',
+            a: '١ - أن يحب المؤمن الله تعالى ورسوله محمداً (ص) أكثر من غيرهما؛ بامتثال أوامر الله واجتناب نواهيه ونصر دينه، وبسلوك طريقة الرسول (ص) والتخلق بأخلاقه واتباع سنته.\n٢ - أن يكون حبه لأخيه المسلم ابتغاء وجه الله ومرضاته، خالصاً نقياً من أي غرض دنيوي أو مصلحة ذاتية.\n٣ - أن يكون متمسكاً بدينه، حريصاً على عقيدته مدافعاً عنها، كارهاً العودة إلى الكفر بعد أن أنقذه الله منه، مثلما يكره أن يُلقى في النار.'
+          },
+          {
+            q: 'ما نوع العلاقة التي تربط المؤمن بالآخرين ؟',
+            a: 'علاقة محبة وإخاء في الله؛ أن يحب المرء لا يحبه إلا الله، ابتغاء وجه الله ومرضاته خالصاً من أي غرض دنيوي أو مصلحة ذاتية.'
+          },
+          {
+            q: 'يحثنا الرسول (ص) أن نقرن العقيدة بالتطبيق العملي ، لماذا ؟',
+            a: 'لأن المؤمن يجد حلاوة الإيمان ويستلذ بالطاعات ويؤثر ذلك على متاع الحياة الدنيا عندما يترجم محبته لله ورسوله وحبه في الله وتمسكه بدينه إلى سلوك عملي وامتثال للأوامر واجتناب للنواهي واتباع للسنة والذود عن العقيدة.'
+          }
+        ]
+      },
+      {
+        id: 'lesson-4',
+        number: 'الدرس الرابع',
+        shortTitle: 'الصدقات',
+        title: 'الصدقات',
+        badge: 'نصوص وإجابات نموذجية من الكتاب نصاً',
+        isQuranLesson: false,
+        hasGuidanceSection: false,
+        discussion: [
+          {
+            q: 'إن الصدقة ليست قاصرة على نوع معين من أنواع البر ، استشهد على ذلك بحديث نبوي شريف واضرب الأمثلة التي تبين صدقة البرّ .',
+            a: 'الاستشهاد: قال رسول الله (ص): «كل معروف صدقة»، وقال (ص): «على كل مسلم صدقة فقالوا: يا نبي الله، فمن لم يجد؟ قال: يعمل بيده، فينفع نفسه ويتصدق قالوا: فإن لم يجد؟ قال: يُعين ذا الحاجة الملهوف قالوا: فإن لم يجد؟ قال: فليعمل بالمعروف، وليمسك عن الشر، فإنها له صدقة».\nالأمثلة: الكلمة الطيبة، وتبسمك في وجه أخيك، وإماطة الأذى عن الطريق، وإرشاد الأعمى ومن ضل الطريق، والنصيحة بالخير، والأمر بالمعروف والنهي عن المنكر، وإعانة ذي الحاجة الملهوف، وعمل الخير والكف عن الشر.'
+          },
+          {
+            q: 'من الملهوف ؟',
+            a: 'هو المستغيث الذي يطلب العون سواء أكان مظلوماً أم عاجزاً.'
+          },
+          {
+            q: 'لماذا تكون صدقة السر أعظم ثوابا ؟',
+            a: 'لأن إخفاء الصدقة عند إعطائها الفقراء يحفظ كرامة الفقير ويُبعد النفس من الرياء والتباهي؛ قال تعالى: ﴿إِن تُبْدُوا الصَّدَقَاتِ فَنِعِمَّا هِيَ ۖ وَإِن تُخْفُوهَا وَتُؤْتُوهَا الْفُقَرَاءَ فَهُوَ خَيْرٌ لَّكُمْ﴾ (البقرة: ٢٧١).'
+          },
+          {
+            q: 'ما معنى الوقف لغة وشرعا ؟ ومثل له .',
+            a: 'الوقف لغةً: الحبس.\nوشرعاً: حبس العين (الملك) عن ملك الواقف والتصدق بالمنافع على الفقراء مع بقاء العين (الملك).\nالأمثلة: الأموال المنقولة كالمصاحف والكتب والأثاث وأدوات الطبخ والأبقار والأغنام، والأموال الثابتة غير المنقولة كالمساجد والمدارس والمستشفيات والجسور.'
+          },
+          {
+            q: 'ما الأمور الثلاثة التي لا تنقطع بعد موت الإنسان ؟ استشهد بالحديث الشريف .',
+            a: 'الأمور الثلاثة: صدقة جارية، أو علم ينتفع به، أو ولد صالح يدعو له.\nالاستشهاد: قال رسول الله (ص): «إذا مات الإنسان انقطع عمله إلا من ثلاث: صدقة جارية، أو علم ينتفع به، أو ولد صالح يدعو له».'
+          },
+          {
+            q: 'هناك آفات تبطل الصدقة ، ماهي ؟',
+            a: '١ - الرياء.\n٢ - إتباع الصدقات بالمن والأذى.\n٣ - التصدق بالشيء الرديء.\n٤ - احتقار شيء من الصدقات (وعدم التراجع في الصدقة).'
+          },
+          {
+            q: 'ما معنى إنظار المعسر ؟',
+            a: 'إمهال المدين (أو إسقاط الدين عنه).'
+          }
+        ]
+      },
+      {
+        id: 'lesson-5',
+        number: 'الدرس الخامس',
+        shortTitle: 'الإمام الحسين (ع)',
+        title: 'الإمام الحسين (عليه السلام)',
+        badge: 'نصوص وإجابات نموذجية من الكتاب نصاً',
+        isQuranLesson: false,
+        hasGuidanceSection: false,
+        discussion: [
+          {
+            q: 'بين منزلة الحسين (ع) كما ذكرها القرآن الكريم والسنة النبوية .',
+            a: 'في القرآن الكريم: ثبت القرآن منزلته في أكثر من آية كريمة منها (آية المباهلة) في سورة آل عمران، و(آية التطهير) في سورة الأحزاب: ﴿إِنَّمَا يُرِيدُ اللَّهُ لِيُذْهِبَ عَنكُمُ الرِّجْسَ أَهْلَ الْبَيْتِ وَيُطَهَّرَكُمْ تَطْهِيرًا﴾.\nفي السنة النبوية: قال رسول الله (ص): «حسين مني وأنا من حسين أحب الله من أحب حسينا حسين سبط من الأسباط»، وقال (ص): «الحسن والحسين سيدا شباب أهل الجنة»، وقال (ص): «هذان ابناي وابنا ابنتي اللهم إني أحبهما فأحبهما وأحب من يحبهما»، وقال (ص): «من أحبني وأحب هذين وأباهما وأمهما كان معي في درجتي يوم القيامة».'
+          },
+          {
+            q: 'ما أبرز مناقب الحسين (ع) ؟ وما أشهر أقواله في الحكمة ورفض الظلم ؟',
+            a: 'أبرز مناقبه: كان تقياً ورعاً كثير العبادة، حج أكثر من عشرين حجة ماشياً على قدميه، وكان يتمثل خلق جده رسول الله (ص)، وكان شجاعاً ثابت العقيدة والمبدأ لا يقبل الظلم والاستبداد مدافعاً عن الحق في أحلك الظروف ولا يخشى في الله لومة لائم وجبروت ظالم، ورحيماً غيوراً، فلم يترك الصلاة وذكر الله حتى في أشد اللحظات صعوبة وفي المعركة.\nأشهر أقواله:\n- «إياك وظلم من لا يجد عليك ناصراً إلا الله تعالى».\n- «البخيل من بخل بالسلام».\n- «إني لا أرى الموت إلا سعادة والحياة مع الظالمين إلا برما».\n- «إني لم أخرج أشراً ولا بطراً ولا مفسداً ولا ظالماً، وإنما خرجت لطلب الإصلاح في أمة جدي، أريد أن آمر بالمعروف وأنهى عن المنكر...».\n- «والله لا أعطيكم بيدي إعطاء الذليل ولا أقر إقرار العبيد».'
+          },
+          {
+            q: 'اذكر نص دعائه في عرفة .',
+            a: '«إلهي كيف يُستدلُّ عليك بما هو في وجوده مفتقر إليك، متى غبت حتى نحتاج إلى دليل يدل عليك، عَمِيَت عين لا تراك، ولا تزال عليها رقيباً، وفسدت صفقة عبد لم تجعل له من حبك نصيباً».'
+          },
+          {
+            q: '( نشاط ) ماذا نفهم من قصة استشهاد الإمام الحسين (ع) ؟',
+            a: 'نفهم أن نهضته (ع) كانت لطلب الإصلاح في أمة جده (ص) والأمر بالمعروف والنهي عن المنكر ورفض الظلم والاستعباد والذلة، وأنها ستظل مثالاً منيراً لكل الأحرار الرافضين للظلم، ومدرسة للخلق والبذل والفداء والثبات على المبدأ والصلاة والذكر حتى في أشد اللحظات، وتوجب علينا الاقتداء بسيرته الطاهرة وأخلاقه النبيلة وإحياء ذكراه في العاشر من محرم (يوم عاشوراء) وفاءً لله ولرسوله ولأهل بيته وللحق.'
+          },
+          {
+            q: 'ما الذي قاله رسول الله (ص) لأسماء عند ولادة الإمام الحسين (ع) ؟',
+            a: 'عندما سألته أسماء بنت عميس عن سبب بكائه عند ولادة الحسين (ع)، قال (ص): «يا أسماء تقتله الفئة الباغية من بعدي لا أنالهم الله شفاعتي».'
+          }
+        ]
+      },
+      {
+        id: 'lesson-6',
+        number: 'الدرس السادس',
+        shortTitle: 'الحرية المنضبطة',
+        title: 'الحرية المنضبطة',
+        badge: 'نصوص وإجابات نموذجية من الكتاب نصاً',
+        isQuranLesson: false,
+        hasGuidanceSection: false,
+        discussion: [
+          {
+            q: 'ما المقصود بالحرية الشخصية ؟ استشهد بآية قرآنية كريمة .',
+            a: 'الحرية الشخصية هي من حقوق الفرد المادية، والمقصود بها أن يكون الإنسان قادراً على التصرف في شؤون نفسه وتتضمن شيئين:\nأ - حرية الذات: بمعنى أن الإسلام أكد كرامة الإنسان وعلو منزلته.\nب - تأمين الذات: بمعنى أن الإسلام يضمن سلامة الفرد وأمنه في نفسه وعرضه وماله.\nالاستشهاد: قال تعالى: ﴿وَلَقَدْ كَرَّمْنَا بَنِي آدَمَ﴾ (الإسراء: ٧٠).'
+          },
+          {
+            q: 'أكد الإسلام حرمة الذات ، وتأمين الذات ، ماذا يقصد من ذلك ؟',
+            a: 'حرية وتقرير كرامة الإنسان وعلو منزلته أياً كان الشخص (رجلاً أو امرأة، حاكماً أو محكوماً) من غير نظر إلى لون أو جنس أو دين، وتأمين الذات يعني ضمان سلامة الفرد وأمنه في نفسه وعرضه وماله؛ فلا يجوز التعرض له بأي شكل من أشكال الاعتداء (بدنياً كالضرب أو على النفس كالسب والشتم والازدراء)، ووضع الإسلام زواجر وعقوبات تكفل حمايته ووقايته من كل ضرر أو اعتداء ليتسنى له ممارسة حقه في الحرية الشخصية.'
+          },
+          {
+            q: 'لماذا جعل الإسلام الحرية مقيدة بقانون إلهي ولم يجعلها مطلقة ؟',
+            a: 'لأن الحرية لا تؤتي ثمارها الحقيقية إلا في ظلال الممارسة الصحيحة لها وبما لا يعارض الدين أو الأخلاق أو القوانين أو حقوق الآخرين وحرياتهم، ولأنه لا حرية في فعل المعصية ولا يصح التطاول على ثوابت الدين وأحكامه وشرائعه، ولحرص الإسلام على المسلمين بمنعهم حتى من ضرر أنفسهم («لا ضرر ولا ضرار»)، فرفض الإسلام الحرية المطلقة التي ليس لها رادع من مبدأ أو شرع وجعلها مقيدة بقانون إلهي لا يأتيه الباطل أبداً ولا يتطرق إليه النقص.'
+          },
+          {
+            q: 'لماذا جاءت الشريعة الإسلامية بحرية الفرد من حيث الفكر والاعتقاد بشرط أن لا تعارض الدين والأخلاق ؟',
+            a: 'لأن الإسلام منع إكراه المرء على عقيدة ما وأقر أن الفكر والاعتقاد لابد من أن يتسم بالحرية من غير إجبار أو تخويف أو تهديد، ولكن في الوقت ذاته فرّق بين الحرية والحرام؛ فلا حرية في فعل المعصية أو التطاول على ثوابت الدين وأحكامه وشرائعه أو الإضرار بالنفس والآخرين، لكي تبقى الحرية منضبطة تحفظ كرامة الإنسان وحقوق الآخرين واستقرار المجتمع.'
+          }
+        ]
+      }
+    ];
+
+    let activeLessonId = UNIT_FIVE_DATA[0].id;
+    let allAnswersVisible = true;
+    const revealedAnswers = new Set();
+
+    function syncDefaultRevealedAnswers() {
+      revealedAnswers.clear();
+      if (allAnswersVisible) {
+        UNIT_FIVE_DATA.forEach((lesson) => {
+          lesson.discussion.forEach((_, idx) => {
+            revealedAnswers.add(`${lesson.id}-q${idx}`);
+          });
+        });
+      }
+    }
+
+    function initTheme() {
+      const savedTheme = localStorage.getItem('unit5_theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+
+    function toggleDarkMode() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('unit5_theme', isDark ? 'dark' : 'light');
+      showToast(isDark ? 'تم تفعيل الوضع الليلي' : 'تم تفعيل الوضع النهاري');
+    }
+
+    function showToast(msg) {
+      const banner = document.getElementById('toastBanner');
+      const textEl = document.getElementById('toastMessage');
+      textEl.textContent = msg;
+      banner.classList.remove('hidden');
+      banner.classList.add('flex');
+      clearTimeout(window.toastTimeout);
+      window.toastTimeout = setTimeout(() => {
+        banner.classList.add('hidden');
+        banner.classList.remove('flex');
+      }, 2400);
+    }
+
+    function copyTextSafe(text, label = 'تم نسخ النص') {
+      try {
+        const tempArea = document.createElement('textarea');
+        tempArea.value = text;
+        tempArea.setAttribute('readonly', '');
+        tempArea.style.position = 'fixed';
+        tempArea.style.opacity = '0';
+        document.body.appendChild(tempArea);
+        tempArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempArea);
+        showToast(label);
+      } catch (err) {
+        showToast('تعذّر النسخ في هذا المتصفح');
+      }
+    }
+
+    function renderLessonNav() {
+      const navContainer = document.getElementById('lessonNavContainer');
+      navContainer.innerHTML = UNIT_FIVE_DATA.map((lesson, index) => {
+        const isActive = lesson.id === activeLessonId;
+        return `
+          <button
+            type="button"
+            onclick="selectLesson('${lesson.id}')"
+            class="shrink-0 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+              isActive
+                ? 'bg-emerald-700 text-white shadow-sm'
+                : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-emerald-100/70 dark:hover:bg-slate-700 border border-slate-200/80 dark:border-slate-700'
+            }"
+          >
+            <span class="w-5 h-5 rounded-full text-[11px] flex items-center justify-center ${
+              isActive ? 'bg-amber-400 text-slate-950 font-extrabold' : 'bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300'
+            }">${index + 1}</span>
+            <span>${lesson.shortTitle}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectLesson(lessonId) {
+      activeLessonId = lessonId;
+      renderLessonNav();
+      renderActiveLesson();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleAnswer(cardKey) {
+      if (revealedAnswers.has(cardKey)) {
+        revealedAnswers.delete(cardKey);
+      } else {
+        revealedAnswers.add(cardKey);
+      }
+      updateAnswerVisibilityUI(cardKey);
+      syncGlobalToggleButton();
+    }
+
+    function updateAnswerVisibilityUI(cardKey) {
+      const answerBox = document.getElementById(`answer-${cardKey}`);
+      const statusBadge = document.getElementById(`status-${cardKey}`);
+      const isVisible = allAnswersVisible || revealedAnswers.has(cardKey);
+
+      if (answerBox) {
+        if (isVisible) {
+          answerBox.classList.remove('hidden');
+        } else {
+          answerBox.classList.add('hidden');
+        }
+      }
+      if (statusBadge) {
+        statusBadge.textContent = isVisible ? 'إخفاء الجواب' : 'عرض الجواب';
+      }
+    }
+
+    function toggleAllAnswers() {
+      allAnswersVisible = !allAnswersVisible;
+      const currentLesson = UNIT_FIVE_DATA.find((l) => l.id === activeLessonId);
+      if (!currentLesson) return;
+
+      currentLesson.discussion.forEach((_, idx) => {
+        const key = `${currentLesson.id}-q${idx}`;
+        if (allAnswersVisible) {
+          revealedAnswers.add(key);
+        } else {
+          revealedAnswers.delete(key);
+        }
+        updateAnswerVisibilityUI(key);
+      });
+
+      syncGlobalToggleButton();
+      showToast(allAnswersVisible ? 'تم إظهار جميع الحلول' : 'تم إخفاء جميع الحلول للمراجعة الذاتية');
+    }
+
+    function syncGlobalToggleButton() {
+      const currentLesson = UNIT_FIVE_DATA.find((l) => l.id === activeLessonId);
+      if (!currentLesson) return;
+
+      const totalQ = currentLesson.discussion.length;
+      const shownCount = currentLesson.discussion.filter((_, idx) => revealedAnswers.has(`${currentLesson.id}-q${idx}`)).length;
+      allAnswersVisible = totalQ > 0 && shownCount === totalQ;
+
+      const btnText = document.getElementById('toggleAllAnswersText');
+      if (btnText) {
+        btnText.textContent = allAnswersVisible ? 'إخفاء كل الحلول' : 'إظهار كل الحلول';
+      }
+    }
+
+    function renderVocabularyCards(vocabList, sectionNum) {
+      if (!vocabList || vocabList.length === 0) return '';
+      return `
+        <section class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-5 sm:p-7 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b border-slate-100 dark:border-slate-800">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-emerald-700 text-white font-extrabold text-sm flex items-center justify-center">${sectionNum}</span>
+              <div>
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">
+                  معاني المفردات (من الكتاب نصاً)
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                  الكلمات ومعانيها الواردة في الكتاب المقرر فقط
+                </p>
+              </div>
+            </div>
+            <span class="text-xs font-extrabold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-500/15 px-2.5 py-1 rounded-xl border border-amber-200/70 dark:border-amber-500/30">
+              للاستاذ نجحني بليز
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+            ${vocabList.map((item) => `
+              <div class="rounded-2xl p-4 bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-700 transition flex flex-col justify-between gap-2">
+                <div>
+                  <p class="quran-text text-base sm:text-lg font-bold text-emerald-800 dark:text-emerald-300 leading-snug mb-1.5">
+                    ${item.word}
+                  </p>
+                  <p class="font-sans text-base sm:text-lg font-medium text-slate-800 dark:text-slate-100 leading-relaxed">
+                    ${item.meaning}
+                  </p>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </section>
+      `;
+    }
+
+    function renderDiscussionSection(lesson) {
+      return `
+        <section class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-5 sm:p-7 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b border-slate-100 dark:border-slate-800">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 font-extrabold text-sm flex items-center justify-center">
+                ؟
+              </span>
+              <div>
+                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">
+                  المناقشة وحلولها (نص الكتاب)
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                  الحلول معروضة تلقائياً ويمكنك إخفاؤها أو إظهارها لأي سؤال للمراجعة الذاتية
+                </p>
+              </div>
+            </div>
+
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+              للاستاذ نجحني بليز
+            </span>
+          </div>
+
+          <div class="space-y-4">
+            ${lesson.discussion.map((item, idx) => {
+              const cardKey = `${lesson.id}-q${idx}`;
+              const isOpen = allAnswersVisible || revealedAnswers.has(cardKey);
+              const rawLines = item.a.split('\n').map((line) => line.trim()).filter(Boolean);
+              const parsedItems = rawLines.map((line) => {
+                const match = line.match(/^([١-٩٠-٩\d]+)\s*[-–—.)]\s*(.+)$/);
+                if (match) {
+                  return { num: match[1], text: match[2].trim(), isNumbered: true };
+                }
+                return { num: null, text: line, isNumbered: false };
+              });
+
+              return `
+                <article class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/50 overflow-hidden transition">
+                  <button
+                    type="button"
+                    onclick="toggleAnswer('${cardKey}')"
+                    class="w-full p-4 sm:p-5 text-right flex items-start justify-between gap-3 hover:bg-emerald-50/50 dark:hover:bg-slate-900/80 transition cursor-pointer"
+                  >
+                    <div class="flex items-start gap-3">
+                      <span class="mt-0.5 w-8 h-8 rounded-lg bg-emerald-700 text-white text-sm font-extrabold flex items-center justify-center shrink-0">
+                        ${idx + 1}
+                      </span>
+                      <span class="text-base sm:text-xl font-extrabold text-slate-900 dark:text-slate-100 leading-relaxed">
+                        ${item.q}
+                      </span>
+                    </div>
+                    <span
+                      id="status-${cardKey}"
+                      class="shrink-0 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold bg-white dark:bg-slate-800 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-slate-700"
+                    >
+                      ${isOpen ? 'إخفاء الجواب' : 'عرض الجواب'}
+                    </span>
+                  </button>
+
+                  <div
+                    id="answer-${cardKey}"
+                    class="${isOpen ? '' : 'hidden'} px-4 sm:px-5 pb-5 pt-3 border-t border-emerald-100 dark:border-slate-800 bg-emerald-50/60 dark:bg-emerald-950/25"
+                  >
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                      <span class="text-xs sm:text-sm font-extrabold text-emerald-800 dark:text-emerald-300">
+                        ✦ الإجابة النموذجية من الكتاب — للاستاذ نجحني بليز
+                      </span>
+                      <button
+                        type="button"
+                        onclick="copyTextSafe(${JSON.stringify(item.a)}, 'تم نسخ الإجابة')"
+                        class="text-xs font-bold text-slate-600 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-300 px-2.5 py-1 rounded-lg bg-white/80 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 cursor-pointer"
+                      >
+                        نسخ الجواب
+                      </button>
+                    </div>
+
+                    <div class="space-y-2.5">
+                      ${parsedItems.map((part) => {
+                        if (part.isNumbered) {
+                          return `
+                            <div class="rounded-2xl p-3.5 sm:p-4 bg-white dark:bg-slate-900/90 border border-emerald-200/80 dark:border-slate-800 flex items-start gap-3 shadow-2xs">
+                              <span class="mt-0.5 min-w-[2rem] h-8 px-2 rounded-xl bg-emerald-700 text-white text-sm sm:text-base font-extrabold flex items-center justify-center shrink-0">
+                                ${part.num}
+                              </span>
+                              <p class="font-sans text-base sm:text-lg font-medium text-slate-800 dark:text-slate-100 leading-relaxed">
+                                ${part.text}
+                              </p>
+                            </div>
+                          `;
+                        }
+                        return `
+                          <div class="rounded-2xl p-3.5 sm:p-4 bg-white/90 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800">
+                            <p class="font-sans text-base sm:text-lg font-medium text-slate-800 dark:text-slate-100 leading-relaxed whitespace-pre-line">
+                              ${part.text}
+                            </p>
+                          </div>
+                        `;
+                      }).join('')}
+                    </div>
+                  </div>
+                </article>
+              `;
+            }).join('')}
+          </div>
+        </section>
+      `;
+    }
+
+    function renderFirstLesson(lesson) {
+      const fullQuranPlain = `${lesson.quranFullText.intro}\n` +
+        lesson.quranFullText.verses.map((v) => `${v.text} (${v.num})`).join(' ') +
+        `\n${lesson.quranFullText.outro}`;
+
+      return `
+        <div class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-5 sm:p-7 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div class="space-y-1">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300">
+                ${lesson.number}
+              </span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                ${lesson.badge}
+              </span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white pt-1">
+              ${lesson.title}
+            </h2>
+          </div>
+          <span class="self-start sm:self-center px-3.5 py-1.5 rounded-2xl text-xs sm:text-sm font-extrabold bg-amber-100 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 border border-amber-300 dark:border-amber-500/40">
+            للاستاذ نجحني بليز
+          </span>
+        </div>
+
+        <!-- 1. السورة (آيات الحفظ ١ - ٥ مدمجة) -->
+        <section class="rounded-3xl bg-white dark:bg-slate-900 border border-emerald-200/80 dark:border-emerald-900/60 p-5 sm:p-8 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b border-slate-100 dark:border-slate-800">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-emerald-700 text-white font-extrabold text-sm flex items-center justify-center">١</span>
+              <h3 class="text-lg sm:text-xl font-extrabold text-emerald-900 dark:text-emerald-300">
+                السورة (آيات الحفظ ١ - ٥ مدمجة)
+              </h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-500/15 px-2.5 py-1 rounded-xl border border-amber-200/70 dark:border-amber-500/30">
+                للاستاذ نجحني بليز
+              </span>
+              <button
+                type="button"
+                onclick="copyTextSafe(${JSON.stringify(fullQuranPlain)}, 'تم نسخ نص آيات الحفظ')"
+                class="text-xs font-bold px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-slate-700 cursor-pointer"
+              >
+                نسخ الآيات
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-gradient-to-b from-emerald-50/70 to-amber-50/40 dark:from-slate-950 dark:to-emerald-950/20 border border-emerald-200/60 dark:border-slate-800 p-5 sm:p-8 text-center">
+            <p class="quran-text text-sm sm:text-base font-bold text-emerald-800 dark:text-emerald-300 mb-3">
+              ${lesson.quranFullText.intro}
+            </p>
+            <p class="quran-text text-xl sm:text-3xl text-slate-900 dark:text-slate-100 text-justify">
+              ${lesson.quranFullText.verses.map((v) => `
+                <span>${v.text}</span>
+                <span class="ayah-badge bg-emerald-700 text-amber-200 dark:bg-emerald-600 dark:text-white">${v.num}</span>
+              `).join(' ')}
+            </p>
+            <p class="quran-text text-base sm:text-lg font-bold text-emerald-800 dark:text-emerald-300 mt-4">
+              ${lesson.quranFullText.outro}
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. معاني المفردات من الكتاب نصاً -->
+        ${renderVocabularyCards(lesson.vocabulary, '٢')}
+
+        <!-- 3. المعنى العام للآيات (١ - ٥) من الكتاب نصاً -->
+        <section class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-5 sm:p-7 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b border-slate-100 dark:border-slate-800">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-emerald-700 text-white font-extrabold text-sm flex items-center justify-center">٣</span>
+              <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">
+                المعنى العام للآيات (١ - ٥)
+              </h3>
+            </div>
+            <span class="text-xs font-extrabold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-500/15 px-2.5 py-1 rounded-xl border border-amber-200/70 dark:border-amber-500/30">
+              للاستاذ نجحني بليز
+            </span>
+          </div>
+
+          <div class="space-y-4">
+            ${lesson.generalMeanings.map((gm) => `
+              <div class="rounded-2xl p-4 sm:p-5 bg-slate-50/80 dark:bg-slate-950/50 border border-slate-200/80 dark:border-slate-800 space-y-2.5">
+                <p class="quran-text text-lg sm:text-xl font-bold text-emerald-900 dark:text-emerald-300 bg-white dark:bg-slate-900 p-3.5 rounded-xl border border-emerald-100 dark:border-slate-800">
+                  ${gm.ayah}
+                </p>
+                <p class="font-sans text-base sm:text-lg font-medium text-slate-800 dark:text-slate-100 leading-relaxed pr-1">
+                  <span class="font-extrabold text-emerald-700 dark:text-emerald-400">المعنى العام: </span>
+                  ${gm.meaning}
+                </p>
+              </div>
+            `).join('')}
+          </div>
+        </section>
+
+        <!-- 4. أبرز ما ترشد إليه السورة -->
+        <section class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-5 sm:p-7 shadow-sm">
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b border-slate-100 dark:border-slate-800">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-emerald-700 text-white font-extrabold text-sm flex items-center justify-center">٤</span>
+              <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">
+                أبرز ما ترشد إليه السورة
+              </h3>
+            </div>
+            <span class="text-xs font-extrabold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-500/15 px-2.5 py-1 rounded-xl border border-amber-200/70 dark:border-amber-500/30">
+              للاستاذ نجحني بليز
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+            ${lesson.guidance.map((pt, idx) => `
+              <div class="rounded-2xl p-4 bg-emerald-50/50 dark:bg-slate-950/60 border border-emerald-200/70 dark:border-slate-800 flex items-start gap-3">
+                <span class="w-7 h-7 rounded-xl bg-emerald-700 text-white text-xs font-extrabold flex items-center justify-center shrink-0 mt-0.5">
+                  ${idx + 1}
+                </span>
+                <p class="font-sans text-base sm:text-lg font-medium text-slate-800 dark:text-slate-100 leading-relaxed">${pt}</p>
+              </div>
+            `).join('')}
+          </div>
+        </section>
+
+        <!-- 5. المناقشة وحلولها -->
+        ${renderDiscussionSection(lesson)}
+      `;
+    }
+
+    function renderStandardLesson(lesson) {
+      const hasVocab = Array.isArray(lesson.vocabulary) && lesson.vocabulary.length > 0;
+      const hasHadith = Boolean(lesson.hadithText && lesson.hadithText.body);
+      const showGuidance = lesson.hasGuidanceSection === true && Array.isArray(lesson.guidance) && lesson.guidance.length > 0;
+      let stepCounter = 1;
+      const hadithStep = hasHadith ? stepCounter++ : null;
+      const vocabStep = hasVocab ? stepCounter++ : null;
+      const guidanceStep = showGuidance ? stepCounter++ : null;
+
+      return `
+        <div class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-5 sm:p-7 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div class="space-y-1">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300">
+                ${lesson.number}
+              </span>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                ${lesson.badge}
+              </span>
+            </div>
+            <h2 class="arabic-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white pt-1">
+              ${lesson.title}
+            </h2>
+          </div>
+          <span class="self-start sm:self-center px-3.5 py-1.5 rounded-2xl text-xs sm:text-sm font-extrabold bg-amber-100 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 border border-amber-300 dark:border-amber-500/40">
+            للاستاذ نجحني بليز
+          </span>
+        </div>
+
+        ${hasHadith ? `
+          <section class="rounded-3xl bg-white dark:bg-slate-900 border border-emerald-200/80 dark:border-emerald-900/60 p-5 sm:p-7 shadow-sm">
+            <div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b border-slate-100 dark:border-slate-800">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-xl bg-emerald-700 text-white font-extrabold text-sm flex items-center justify-center">
+                  ${hadithStep}
+                </span>
+                <div>
+                  <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">
+                    نص الحديث النبوي الشريف (من الكتاب نصاً)
+                  </h3>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">
+                    حديث الوحدة الخامسة — من حلاوة الإيمان
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onclick="copyTextSafe(${JSON.stringify(`${lesson.hadithText.narrator}\n${lesson.hadithText.body}`)}, 'تم نسخ الحديث الشريف')"
+                class="text-xs font-bold px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 dark:bg-slate-800 dark:hover:bg-slate-700 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-slate-700 cursor-pointer"
+              >
+                نسخ الحديث
+              </button>
+            </div>
+
+            <div class="rounded-2xl bg-gradient-to-b from-emerald-50/70 to-amber-50/40 dark:from-slate-950 dark:to-emerald-950/20 border border-emerald-200/60 dark:border-slate-800 p-5 sm:p-7 text-center space-y-3">
+              <p class="text-sm sm:text-base font-bold text-emerald-800 dark:text-emerald-300">
+                ${lesson.hadithText.narrator}
+              </p>
+              <p class="quran-text text-xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
+                ${lesson.hadithText.body}
+              </p>
+            </div>
+          </section>
+        ` : ''}
+
+        ${hasVocab ? renderVocabularyCards(lesson.vocabulary, String(vocabStep)) : ''}
+
+        ${showGuidance ? `
+          <section class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-5 sm:p-7 shadow-sm">
+            <div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-5 border-b border-slate-100 dark:border-slate-800">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-xl bg-emerald-700 text-white font-extrabold text-sm flex items-center justify-center">
+                  ${guidanceStep}
+                </span>
+                <div>
+                  <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white">
+                    ${lesson.guidanceTitle || 'أبرز ما يرشد إليه الدرس'}
+                  </h3>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">
+                    من نص الكتاب المقرر
+                  </p>
+                </div>
+              </div>
+              <span class="text-xs font-extrabold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-500/15 px-2.5 py-1 rounded-xl border border-amber-200/70 dark:border-amber-500/30">
+                للاستاذ نجحني بليز
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              ${lesson.guidance.map((pt, idx) => `
+                <div class="rounded-2xl p-4 bg-emerald-50/45 dark:bg-slate-950/60 border border-emerald-200/70 dark:border-slate-800 flex items-start gap-3">
+                  <span class="w-7 h-7 rounded-xl bg-emerald-700 text-white text-xs font-extrabold flex items-center justify-center shrink-0 mt-0.5">
+                    ${idx + 1}
+                  </span>
+                  <p class="font-sans text-base sm:text-lg font-medium text-slate-800 dark:text-slate-100 leading-relaxed">${pt}</p>
+                </div>
+              `).join('')}
+            </div>
+          </section>
+        ` : ''}
+
+        ${renderDiscussionSection(lesson)}
+      `;
+    }
+
+    function renderActiveLesson() {
+      const container = document.getElementById('lessonContentContainer');
+      const lesson = UNIT_FIVE_DATA.find((l) => l.id === activeLessonId) || UNIT_FIVE_DATA[0];
+      container.innerHTML = lesson.isQuranLesson ? renderFirstLesson(lesson) : renderStandardLesson(lesson);
+      syncGlobalToggleButton();
+    }
+
+    function initScrollTopButton() {
+      const btn = document.getElementById('scrollTopBtn');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 280) {
+          btn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+          btn.classList.add('opacity-100', 'translate-y-0');
+        } else {
+          btn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+          btn.classList.remove('opacity-100', 'translate-y-0');
+        }
+      }, { passive: true });
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      syncDefaultRevealedAnswers();
+      renderLessonNav();
+      renderActiveLesson();
+      initScrollTopButton();
+    });
+  </script>
+</body>
+</html>
